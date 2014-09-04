@@ -1,0 +1,1 @@
+function $_global_blank(){if("undefined"==typeof g_all_modules)g_all_modules={};g_all_modules["blank.js"]={version:{rmj:16,rmm:0,rup:2308,rpr:1231}}}function ULSaew(){var a={};a.ULSTeamName="Microsoft SharePoint Foundation";a.ULSFileName="blank.commentedjs";return a}$_global_blank();

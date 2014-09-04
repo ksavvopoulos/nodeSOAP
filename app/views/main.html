@@ -1,0 +1,40 @@
+<div id="main">
+    <!--<button ng-click="ispring()">Ispring</button>-->
+    <div>Demo Site Lists</div>
+    <div>
+        <ul>
+            <li ng-repeat="item in items">{{item.Title}}</li>
+        </ul>
+     </div>
+     <div>
+        <div ng-show="!isLogged">
+            Username<input type="text" ng-model="username"/>
+            Password<input type="password" ng-model="password"/>
+            <button type="button" ng-click="login()">Login</button>    
+        </div>
+     	<div ng-show="isLogged">
+            Entity<input type="text" ng-model="entity" />
+            Attributes <input type="text" ng-model="attribute" />
+            <button type="button" ng-click="soap()">soap</button>
+        </div>
+     </div>
+     <div ng-show="showSoap">
+        <div style="display:inline;">
+            List Title <input type="text" ng-model="listTitle" />
+        </div>
+        <div style="display:inline;">
+            Select Attribute for Items title <select ng-model="selectedAttr" ng-options="attr.key for attr in attributesArray"></select>
+        </div>
+        <div style="display:inline;">
+            <button type="button" ng-click="clone()">Clone</button>
+        </div>
+        <div>
+            Display Attribute <select ng-model="displayAttr" ng-options="attr.key for attr in attributesArray"></select>
+        </div>
+         <ul>
+            <li ng-repeat="invoice in invoices">{{invoice[displayAttr.key][displayTypes[displayAttr.type]]}}</li>
+        </ul>
+        <div><button type="button" ng-click="getAtrribute()">Get Attribute</button></div>
+     </div>
+
+</div>

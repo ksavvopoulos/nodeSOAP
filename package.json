@@ -1,0 +1,19 @@
+{
+  "name": "ksavvas",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.10.21"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "3.2.0",
+    "node-uuid": "~1.4.1",
+    "traverse": "~0.6.6",
+    "xmldom": "~0.1.18",
+    "xpath": "0.0.5",
+    "q": "~1.0.0"
+  }
+}

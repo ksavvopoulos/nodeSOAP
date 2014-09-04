@@ -1,0 +1,18 @@
+<s:Body>
+    <Execute xmlns="http://schemas.microsoft.com/xrm/2011/Contracts/Services" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+      <request i:type="a:RetrieveAllEntitiesRequest" xmlns:a="http://schemas.microsoft.com/xrm/2011/Contracts">
+        <a:Parameters xmlns:b="http://schemas.datacontract.org/2004/07/System.Collections.Generic">
+          <a:KeyValuePairOfstringanyType>
+            <b:key>EntityFilters</b:key>
+            <b:value i:type="c:EntityFilters" xmlns:c="http://schemas.microsoft.com/xrm/2011/Metadata" />
+          </a:KeyValuePairOfstringanyType>
+          <a:KeyValuePairOfstringanyType>
+            <b:key>RetrieveAsIfPublished</b:key>
+            <b:value i:type="c:boolean" xmlns:c="http://www.w3.org/2001/XMLSchema">false</b:value>
+          </a:KeyValuePairOfstringanyType>
+        </a:Parameters>
+        <a:RequestId i:nil="true" />
+        <a:RequestName>RetrieveAllEntities</a:RequestName>
+      </request>
+    </Execute>
+  </s:Body>

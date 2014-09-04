@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<title>App</title>
+	<script type="text/javascript" src="bower_components/jquery/jquery.js" ></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js" ></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js" ></script>
+	<script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/init.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/scriptresource.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/initstrings.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/clienttemplates.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/sp.runtime.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/sposuitenav.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/blank.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/calloutusagecontrolscript.js" ></script>	
+	<script type="text/javascript" src="scripts/sharepoint/core.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/sp.init.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/sp.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/sp.core.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/SP.UI.Dialog.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/sp.requestexecutor.js" ></script>
+	<script type="text/javascript" src="scripts/sharepoint/SP.UI.Controls.js" ></script>
+	<script type="text/javascript" src="scripts/spyreqs.js" ></script>
+	<script type="text/javascript" src="scripts/chromeLoader.js" ></script>
+	<script type="text/javascript" src="scripts/App.js" ></script>
+	
+</head>
+<body>
+	<!-- Chrome control placeholder -->
+    <div id="chrome_ctrl_placeholder"></div>
+    <div id="MainContent">
+		<div ng-app="myApp">
+    	    <div>
+    	        <a href="#/lessons">Lessons</a>
+    	        <a href="#/ispring">iSpring</a>
+    	    </div>
+    	    <div ng-view=""></div>
+    	</div>
+    </div>
+</body>
+</html>

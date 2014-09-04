@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="mes"></div>
+	<script type="text/javascript">
+	var Ispring;
+	(function(){
+		spyreqs.rest.getCurrentUser().done(function(data){
+			var user=data.d;
+			Ispring = window.open("https://inedua2.sharepoint.com/sites/GP_dev/KS_dev/isprings/Quiz 2/index.aspx?username="+user.Title+"&email="+user.Email,"","width=720,height=540");
+
+			var timer = setInterval(function() {   
+    			if(Ispring.closed) {  
+        			clearInterval(timer);  
+       				$('#mes').text('Saving Results to List...');
+					$.ajax({
+						url:'/ispringres'
+					}).done(function(data){
+						console.log(data);
+						var res = data.res;
+						var item = {
+                			"__metadata": {
+                    			type: "SP.Data.Ispring_x0020_resultsListItem"
+                			},
+               			 	Title: res.username,
+               			 	mybt:res.email,
+               			 	c7rd:res.passingPercent,
+               			 	adld:res.points,
+               			 	uerr:res.quizTitle,
+               			 	oimp:res.gainedScore
+               			};
+						spyreqs.rest.addHostListItem("ispring results",item).done(function(){
+							$('#mes').text('Results saved!');
+						});
+					});
+    			}  
+			}, 100); 
+				
+		});
+		
+	}());
+	</script>
+</body>
+</html>
